@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="/blog/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/blog/assets/images/rogo.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="woonyong.log">
 <link rel="stylesheet" href="/blog/assets/css/main.css">
 <script>
@@ -129,28 +129,6 @@
         <span class="profile__stat-label">시리즈</span>
       </div>
     </div>
-
-    <div class="profile__actions">
-      <a class="profile__icon-link" href="https://github.com/woonyong-kr" target="_blank" rel="noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.12 3.04.73.8 1.17 1.83 1.17 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
-            fill="currentColor"
-          ></path>
-        </svg>
-      </a>
-      <a class="profile__icon-link" href="https://woonyong-kr.github.io/blog/" aria-label="홈페이지">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 3.5 3 11v9a1 1 0 0 0 1 1h5.5v-5.5h5V21H20a1 1 0 0 0 1-1v-9l-9-7.5Zm0-2.6 10 8.34a1 1 0 0 1 .36.76V20a3 3 0 0 1-3 3h-6.86v-5.5h-1V23H4.64a3 3 0 0 1-3-3V10a1 1 0 0 1 .36-.76L12 .9Z"
-            fill="currentColor"
-          ></path>
-        </svg>
-      </a>
-      <a class="profile__cta" href="https://github.com/woonyong-kr" target="_blank" rel="noreferrer">
-        GitHub 보기
-      </a>
-    </div>
   </div>
 </section>
 
@@ -170,39 +148,101 @@
   <section class="content-section">
     <header class="section-header">
       <h2>시리즈</h2>
-      
-        <p>연속된 주제로 묶인 글을 한곳에서 볼 수 있습니다.</p>
-      
     </header>
-    <div class="series-list">
+    <div class="series-groups">
       
   
   
   
   
-    <section class="series-card">
-      <div class="series-card__top">
-        <div>
-          <p class="series-card__eyebrow">Series</p>
-          <h3>작게 배포하고 빠르게 배우기</h3>
-          <p class="series-card__description">작은 릴리즈와 짧은 피드백 루프로 제품을 다듬는 배포 메모입니다.</p>
-        </div>
-        <span class="series-card__count">2편</span>
+    <section class="series-group">
+      <div class="series-group__header">
+        <h3 class="series-group__title">작게 배포하고 빠르게 배우기</h3>
+        <span class="series-group__count">2편</span>
       </div>
+      
+<div class="post-list">
+  
+    
 
-      <div class="series-card__posts">
-        
-          <a class="series-post" href="/blog/automation-notes/">
-            <strong>배포 자동화를 단순하게 유지하는 메모</strong>
-            <span>2026년 3월 28일</span>
-          </a>
-        
-          <a class="series-post" href="/blog/ship-small-fast/">
-            <strong>작게 배포하고 빠르게 배우는 블로그 시작기</strong>
-            <span>2026년 3월 14일</span>
-          </a>
-        
-      </div>
+
+<article class="post-card">
+  
+
+  <div class="post-card__eyebrow">
+    
+      <span class="post-card__type">시리즈</span>
+      <span class="post-card__context">작게 배포하고 빠르게 배우기</span>
+    
+  </div>
+
+  <a class="post-card__title-link" href="/blog/automation-notes/">
+    <h2 class="post-card__title">배포 자동화를 단순하게 유지하는 메모</h2>
+  </a>
+
+  <p class="post-card__description">블로그 자동화에서 중요한 것은 최신 기술보다 실패했을 때 바로 복구 가능한 파이프라인이라는 내용을 정리했습니다.</p>
+
+  
+    <div class="post-card__tags">
+      
+        <span class="tag-chip">Automation</span>
+      
+        <span class="tag-chip">CI</span>
+      
+        <span class="tag-chip">Operations</span>
+      
+    </div>
+  
+
+  <div class="post-card__meta">
+    <span>2026년 3월 28일</span>
+    <span class="post-card__dot">·</span>
+    <span>1분 읽기</span>
+  </div>
+</article>
+
+  
+    
+
+
+<article class="post-card">
+  
+
+  <div class="post-card__eyebrow">
+    
+      <span class="post-card__type">시리즈</span>
+      <span class="post-card__context">작게 배포하고 빠르게 배우기</span>
+    
+  </div>
+
+  <a class="post-card__title-link" href="/blog/ship-small-fast/">
+    <h2 class="post-card__title">작게 배포하고 빠르게 배우는 블로그 시작기</h2>
+  </a>
+
+  <p class="post-card__description">Jenkins와 GitHub Pages를 묶을 때 처음부터 크게 설계하지 않고, 작은 배포 루프로 시작하는 이유를 정리했습니다.</p>
+
+  
+    <div class="post-card__tags">
+      
+        <span class="tag-chip">Jenkins</span>
+      
+        <span class="tag-chip">GitHub Pages</span>
+      
+        <span class="tag-chip">Deployment</span>
+      
+    </div>
+  
+
+  <div class="post-card__meta">
+    <span>2026년 3월 14일</span>
+    <span class="post-card__dot">·</span>
+    <span>1분 읽기</span>
+  </div>
+</article>
+
+  
+</div>
+
     </section>
   
 
@@ -210,24 +250,55 @@
   
   
   
-    <section class="series-card">
-      <div class="series-card__top">
-        <div>
-          <p class="series-card__eyebrow">Series</p>
-          <h3>화면을 나누는 기준</h3>
-          <p class="series-card__description">컴포넌트 경계, 상태 배치, 책임 분리를 실제 화면 설계 기준으로 정리합니다.</p>
-        </div>
-        <span class="series-card__count">1편</span>
+    <section class="series-group">
+      <div class="series-group__header">
+        <h3 class="series-group__title">화면을 나누는 기준</h3>
+        <span class="series-group__count">1편</span>
       </div>
+      
+<div class="post-list">
+  
+    
 
-      <div class="series-card__posts">
-        
-          <a class="series-post" href="/blog/component-boundaries/">
-            <strong>컴포넌트 경계를 잡을 때 먼저 보는 세 가지</strong>
-            <span>2026년 3월 21일</span>
-          </a>
-        
-      </div>
+
+<article class="post-card">
+  
+
+  <div class="post-card__eyebrow">
+    
+      <span class="post-card__type">시리즈</span>
+      <span class="post-card__context">화면을 나누는 기준</span>
+    
+  </div>
+
+  <a class="post-card__title-link" href="/blog/component-boundaries/">
+    <h2 class="post-card__title">컴포넌트 경계를 잡을 때 먼저 보는 세 가지</h2>
+  </a>
+
+  <p class="post-card__description">화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다.</p>
+
+  
+    <div class="post-card__tags">
+      
+        <span class="tag-chip">Frontend</span>
+      
+        <span class="tag-chip">Architecture</span>
+      
+        <span class="tag-chip">Design System</span>
+      
+    </div>
+  
+
+  <div class="post-card__meta">
+    <span>2026년 3월 21일</span>
+    <span class="post-card__dot">·</span>
+    <span>1분 읽기</span>
+  </div>
+</article>
+
+  
+</div>
+
     </section>
   
 
