@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/blog/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="woonyong.log">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem("velog-theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+    } catch (error) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>컴포넌트 경계를 잡을 때 먼저 보는 세 가지 | woonyong.log</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="컴포넌트 경계를 잡을 때 먼저 보는 세 가지" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다." />
+<meta property="og:description" content="화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다." />
+<link rel="canonical" href="https://woonyong-kr.github.io/blog/component-boundaries/" />
+<meta property="og:url" content="https://woonyong-kr.github.io/blog/component-boundaries/" />
+<meta property="og:site_name" content="woonyong.log" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-21T11:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="컴포넌트 경계를 잡을 때 먼저 보는 세 가지" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-21T11:00:00+09:00","datePublished":"2026-03-21T11:00:00+09:00","description":"화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다.","headline":"컴포넌트 경계를 잡을 때 먼저 보는 세 가지","mainEntityOfPage":{"@type":"WebPage","@id":"https://woonyong-kr.github.io/blog/component-boundaries/"},"url":"https://woonyong-kr.github.io/blog/component-boundaries/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header__inner">
+    <a class="header-logo" href="/blog/" aria-label="woonyong.log">
+      <span class="header-logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" role="img">
+          <path d="M5 7h6.4l4.6 9.7L20.6 7H27L18.9 25h-5.7L5 7Z" fill="currentColor"></path>
+        </svg>
+      </span>
+      <span class="header-logo__text">woonyong.log</span>
+    </a>
+
+    <nav class="header-actions" aria-label="바로가기">
+      <a
+        class="icon-button"
+        href="https://github.com/woonyong-kr"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="GitHub"
+        title="GitHub"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.12 3.04.73.8 1.17 1.83 1.17 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </a>
+      <a class="icon-button" href="/blog/feed.xml" aria-label="RSS" title="RSS">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M5 3.5a1.5 1.5 0 0 0 0 3c6.9 0 12.5 5.6 12.5 12.5a1.5 1.5 0 0 0 3 0C20.5 10.44 13.56 3.5 5 3.5Zm0 6a1.5 1.5 0 0 0 0 3c3.58 0 6.5 2.92 6.5 6.5a1.5 1.5 0 0 0 3 0c0-5.24-4.26-9.5-9.5-9.5Zm.5 7.75A2.25 2.25 0 1 0 5.5 21.5a2.25 2.25 0 0 0 0-4.25Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </a>
+      <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="테마 전환" title="테마 전환">
+        <span class="theme-toggle__sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 17.5A5.5 5.5 0 1 0 12 6.5a5.5 5.5 0 0 0 0 11Zm0-15a1 1 0 0 1 1 1v1.5a1 1 0 1 1-2 0V3.5a1 1 0 0 1 1-1Zm0 16a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1Zm8.5-7.5a1 1 0 1 1 0 2H19a1 1 0 1 1 0-2h1.5ZM5 12a1 1 0 0 1-1 1H2.5a1 1 0 1 1 0-2H4a1 1 0 0 1 1 1Zm11.36 5.95a1 1 0 0 1 1.42 0l1.06 1.06a1 1 0 0 1-1.42 1.42l-1.06-1.06a1 1 0 0 1 0-1.42ZM6.58 7.64a1 1 0 0 1 0-1.42L7.64 5.16a1 1 0 1 1 1.42 1.42L8 7.64a1 1 0 0 1-1.42 0Zm10.2-1.42a1 1 0 1 1 1.42-1.42l1.06 1.06a1 1 0 0 1-1.42 1.42l-1.06-1.06Zm-10.2 10.2a1 1 0 0 1 1.42 0L9.06 17.5a1 1 0 0 1-1.42 1.42L6.58 17.86a1 1 0 0 1 0-1.42Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </span>
+        <span class="theme-toggle__moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M14.55 2.2a1 1 0 0 1 1.11 1.3 8.5 8.5 0 1 0 10.84 10.84 1 1 0 0 1 1.3 1.11A10.5 10.5 0 1 1 14.55 2.2Z"
+              fill="currentColor"
+              transform="translate(-3 -3)"
+            ></path>
+          </svg>
+        </span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <main>
+      
+
+<article class="post-view">
+  <a class="post-view__back" href="/blog/">글 목록으로 돌아가기</a>
+
+  <header class="post-head">
+    
+      <p class="post-head__series">화면을 나누는 기준</p>
+    
+    <h1 class="post-head__title">컴포넌트 경계를 잡을 때 먼저 보는 세 가지</h1>
+    <p class="post-head__description">화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다.</p>
+
+    <div class="post-head__author">
+      <img
+        class="post-head__avatar"
+        src="https://github.com/woonyong-kr.png"
+        alt="Woon Yong"
+        width="48"
+        height="48"
+      >
+      <div class="post-head__meta-block">
+        <strong>Woon Yong</strong>
+        <span>
+          2026년 3월 21일 · 1분 읽기
+        </span>
+      </div>
+    </div>
+
+    
+      <div class="post-head__tags">
+        
+          <span class="tag-chip">Frontend</span>
+        
+          <span class="tag-chip">Architecture</span>
+        
+          <span class="tag-chip">Design System</span>
+        
+      </div>
+    
+  </header>
+
+  <section class="prose">
+    <p>컴포넌트를 나눌 때 흔히 <code class="language-plaintext highlighter-rouge">재사용 가능할까?</code>를 먼저 묻습니다. 물론 중요하지만, 실제로 더 오래 남는 기준은 아래 세 가지였습니다.</p>
+
+<h2 id="1-누가-상태를-소유하는가">1. 누가 상태를 소유하는가</h2>
+
+<p>상태가 자주 바뀌는 화면일수록 컴포넌트 경계는 마크업보다 상태 소유권에 맞춰야 합니다.</p>
+
+<p>예를 들어 글 목록 카드에서 다음 상태가 섞이면 금방 복잡해집니다.</p>
+
+<ul>
+  <li>정렬 기준</li>
+  <li>필터 조건</li>
+  <li>현재 페이지</li>
+  <li>로딩 상태</li>
+  <li>빈 상태</li>
+</ul>
+
+<p>이때 카드 자체는 최대한 읽기 전용으로 두고, 목록 컨테이너가 상태를 소유하게 두는 편이 낫습니다.</p>
+
+<h2 id="2-변경-이유가-같은가">2. 변경 이유가 같은가</h2>
+
+<p>같은 화면 안에 있어도 변경 이유가 다르면 분리해야 합니다.</p>
+
+<p>예를 들어 프로필 헤더와 글 탭은 가까이 붙어 있지만 바뀌는 이유가 다릅니다.</p>
+
+<ul>
+  <li>프로필 헤더는 사용자 정보가 바뀔 때 수정된다</li>
+  <li>글 탭은 탐색 구조가 바뀔 때 수정된다</li>
+</ul>
+
+<p>이 둘을 한 파일에서 같이 다루기 시작하면 작은 수정도 불필요하게 넓어집니다.</p>
+
+<h2 id="3-스타일-토큰을-공유하는가">3. 스타일 토큰을 공유하는가</h2>
+
+<p>디자인을 비슷하게 맞추는 것과 같은 컴포넌트인 것은 다릅니다. 간격, 색상, 타이포 토큰만 공유하고 실제 구조는 분리하는 편이 더 자주 이깁니다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"profile"</span><span class="nt">&gt;&lt;/section&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"velog-tabs"</span><span class="nt">&gt;&lt;/nav&gt;</span>
+<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post-card"</span><span class="nt">&gt;&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<p>이렇게 역할이 분명하면 나중에 일부만 교체해도 전체 인상이 크게 무너지지 않습니다.</p>
+
+<h2 id="결론">결론</h2>
+
+<p>컴포넌트 경계는 보기 좋은 파일 분할보다 <strong>상태, 변경 이유, 토큰 공유 여부</strong>로 정하는 편이 오래 갑니다. 화면 구조가 비슷해 보여도 책임이 다르면 분리하고, 책임이 같으면 파일 수가 조금 적어도 괜찮습니다.</p>
+
+  </section>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>Copyright &copy; 2026 woonyong.log</p>
+    <p>Built with Jekyll, inspired by velog.</p>
+  </div>
+</footer>
+
+    <script src="/blog/assets/js/site.js"></script>
+  </body>
+</html>
