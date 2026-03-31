@@ -4,17 +4,45 @@
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<link rel="icon" href="/blog/assets/images/rogo.svg?v=1774941918" type="image/svg+xml">
+<meta name="theme-color" content="#ffffff" data-theme-color>
+<meta name="apple-mobile-web-app-status-bar-style" content="default" data-apple-status-bar>
+<link rel="icon" href="/blog/assets/images/rogo.svg?v=1774943971" type="image/svg+xml" sizes="any">
+<link rel="shortcut icon" href="/blog/assets/images/rogo.svg?v=1774943971" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/blog/assets/images/rogo.svg?v=1774943971">
+<link rel="mask-icon" href="/blog/assets/images/rogo.svg?v=1774943971" color="#12b886">
 <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="woonyong.log">
-<link rel="stylesheet" href="/blog/assets/css/main.css?v=1774941918">
+<link rel="stylesheet" href="/blog/assets/css/main.css?v=1774943971">
 <script>
   (function () {
+    function applyTheme(theme) {
+      var safeTheme = theme === "dark" ? "dark" : "light";
+      var color = safeTheme === "dark" ? "#121212" : "#ffffff";
+      var themeColorMeta = document.querySelector("[data-theme-color]");
+      var appleStatusMeta = document.querySelector("[data-apple-status-bar]");
+
+      document.documentElement.setAttribute("data-theme", safeTheme);
+
+      if (themeColorMeta) {
+        themeColorMeta.setAttribute("content", color);
+      }
+
+      if (appleStatusMeta) {
+        appleStatusMeta.setAttribute("content", safeTheme === "dark" ? "black" : "default");
+      }
+    }
+
     try {
-      var theme = localStorage.getItem("velog-theme") || "light";
-      document.documentElement.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+      var storedTheme = localStorage.getItem("velog-theme");
+      var hasStoredTheme = storedTheme === "light" || storedTheme === "dark";
+      var theme = hasStoredTheme
+        ? storedTheme
+        : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+
+      applyTheme(theme);
     } catch (error) {
-      document.documentElement.setAttribute("data-theme", "light");
+      applyTheme(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     }
   })();
 </script>
@@ -93,6 +121,14 @@
           </svg>
         </span>
       </button>
+      <a class="header-user" href="/blog/about/" aria-label="프로필">
+        <img src="/blog/assets/images/rogo.svg" alt="Woon Yong" width="40" height="40">
+        <span class="header-user__caret" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+          </svg>
+        </span>
+      </a>
     </nav>
   </div>
 </header>
@@ -105,7 +141,7 @@
     <div class="profile__left">
       <img
         class="profile__avatar"
-        src="https://github.com/woonyong-kr.png"
+        src="/blog/assets/images/rogo.svg"
         alt="Woon Yong"
         width="128"
         height="128"
@@ -123,11 +159,11 @@
   <div class="profile__bottom">
     <div class="profile__stats">
       <div class="profile__stat">
-        <span class="profile__stat-value">3</span>
+        <span class="profile__stat-value">100</span>
         <span class="profile__stat-label">포스트</span>
       </div>
       <div class="profile__stat">
-        <span class="profile__stat-value">2</span>
+        <span class="profile__stat-value">10</span>
         <span class="profile__stat-label">시리즈</span>
       </div>
     </div>
@@ -188,14 +224,130 @@
       <a href="/blog/?series=component-architecture">
         
           <div class="series-card__image">
-            <img src="/blog/assets/images/posts/component-boundaries.svg" alt="화면을 나누는 기준">
+            <img src="/blog/assets/images/posts/demo-02.svg" alt="화면을 나누는 기준">
           </div>
         
         <h3 class="series-card__title">화면을 나누는 기준</h3>
         <p class="series-card__meta">
-          <span class="series-card__count">1개의 포스트</span>
+          <span class="series-card__count">11개의 포스트</span>
           <span class="series-card__dot">·</span>
-          <span>마지막 업데이트 2026년 3월 21일</span>
+          <span>마지막 업데이트 2026년 3월 28일</span>
+        </p>
+      </a>
+    </article>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    
+    
+    
+    
+    <article class="series-card">
+      <a href="/blog/?series=design-systems">
+        
+          <div class="series-card__image">
+            <img src="/blog/assets/images/posts/demo-04.svg" alt="디자인 시스템 운영 메모">
+          </div>
+        
+        <h3 class="series-card__title">디자인 시스템 운영 메모</h3>
+        <p class="series-card__meta">
+          <span class="series-card__count">10개의 포스트</span>
+          <span class="series-card__dot">·</span>
+          <span>마지막 업데이트 2026년 3월 25일</span>
+        </p>
+      </a>
+    </article>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    
+    
+    
+    
+    <article class="series-card">
+      <a href="/blog/?series=observability-notes">
+        
+        <h3 class="series-card__title">관측 가능성 로그북</h3>
+        <p class="series-card__meta">
+          <span class="series-card__count">10개의 포스트</span>
+          <span class="series-card__dot">·</span>
+          <span>마지막 업데이트 2026년 3월 22일</span>
+        </p>
+      </a>
+    </article>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    
+    
+    
+    
+    <article class="series-card">
+      <a href="/blog/?series=data-fetching">
+        
+          <div class="series-card__image">
+            <img src="/blog/assets/images/posts/demo-08.svg" alt="데이터 페칭 레시피">
+          </div>
+        
+        <h3 class="series-card__title">데이터 페칭 레시피</h3>
+        <p class="series-card__meta">
+          <span class="series-card__count">9개의 포스트</span>
+          <span class="series-card__dot">·</span>
+          <span>마지막 업데이트 2026년 3월 22일</span>
+        </p>
+      </a>
+    </article>
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+    
+    
+    
+    
+    <article class="series-card">
+      <a href="/blog/?series=browser-performance">
+        
+          <div class="series-card__image">
+            <img src="/blog/assets/images/posts/demo-10.svg" alt="브라우저 성능 메모">
+          </div>
+        
+        <h3 class="series-card__title">브라우저 성능 메모</h3>
+        <p class="series-card__meta">
+          <span class="series-card__count">9개의 포스트</span>
+          <span class="series-card__dot">·</span>
+          <span>마지막 업데이트 2026년 3월 18일</span>
         </p>
       </a>
     </article>
@@ -215,6 +367,6 @@
   </div>
 </footer>
 
-    <script src="/blog/assets/js/site.js?v=1774941918"></script>
+    <script src="/blog/assets/js/site.js?v=1774943971"></script>
   </body>
 </html>
