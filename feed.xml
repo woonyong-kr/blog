@@ -1,43 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://woonyong-kr.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woonyong-kr.github.io/blog/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2026-04-02T21:07:30+09:00</updated><id>https://woonyong-kr.github.io/blog/feed.xml</id><title type="html">woonyong.log</title><subtitle>프론트엔드, 자동화, 배포를 차분하게 기록하는 개발 블로그</subtitle><entry><title type="html">배포 자동화를 단순하게 유지하는 메모</title><link href="https://woonyong-kr.github.io/blog/automation-notes/" rel="alternate" type="text/html" title="배포 자동화를 단순하게 유지하는 메모" /><published>2026-03-28T20:15:00+09:00</published><updated>2026-03-28T20:15:00+09:00</updated><id>https://woonyong-kr.github.io/blog/automation-notes</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/automation-notes/"><![CDATA[<p>자동화는 한 번 넣으면 계속 남습니다. 그래서 처음부터 복잡하게 만들기보다, 사람이 읽기 쉬운 단계로 유지하는 것이 더 중요합니다.</p>
-
-<h2 id="설치-단계는-의존성을-숨기지-않는다">설치 단계는 의존성을 숨기지 않는다</h2>
-
-<p>파이프라인 초반부에서 무엇이 설치되는지 명확하게 보여야 합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
-</span>bundle <span class="nb">exec </span>jekyll build
-</code></pre></div></div>
-
-<p>명령이 단순하면 환경이 달라져도 문제를 찾기 쉽습니다. 반대로 너무 많은 래퍼 스크립트 안에 숨기면 실패 지점을 찾는 시간이 길어집니다.</p>
-
-<h2 id="산출물-검증은-꼭-넣는다">산출물 검증은 꼭 넣는다</h2>
-
-<p>빌드가 성공했다고 바로 배포하면 빈 디렉터리나 잘못된 경로가 그대로 올라갈 수 있습니다.</p>
-
-<p>그래서 최소한 아래 두 검사는 항상 넣는 편입니다.</p>
-
-<ul>
-  <li>결과 디렉터리가 존재하는가</li>
-  <li>대표 HTML 파일이 실제로 생성됐는가</li>
-</ul>
-
-<p>작아 보이지만 이 두 줄이 많은 실수를 막아줍니다.</p>
-
-<h2 id="배포-브랜치는-목적을-하나만-가진다">배포 브랜치는 목적을 하나만 가진다</h2>
-
-<p><code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치에는 빌드 결과만 있고, 소스는 <code class="language-plaintext highlighter-rouge">main</code>에만 있도록 두면 복구가 쉬워집니다.</p>
-
-<p>이 구조의 장점은 명확합니다.</p>
-
-<ul>
-  <li>현재 배포 중인 파일을 바로 확인할 수 있다</li>
-  <li>이전 상태로 되돌리기 쉽다</li>
-  <li>정적 호스팅 서비스와 연결이 단순하다</li>
-</ul>
-
-<h2 id="끝으로">끝으로</h2>
-
-<p>자동화는 화려한 기능보다 <strong>읽기 쉬운 단계와 분명한 실패 지점</strong>이 더 중요합니다. 블로그처럼 자주 고치는 프로젝트일수록 단순한 파이프라인이 오래 살아남습니다.</p>]]></content><author><name></name></author><category term="Automation" /><category term="CI" /><category term="Operations" /><summary type="html"><![CDATA[블로그 자동화에서 중요한 것은 최신 기술보다 실패했을 때 바로 복구 가능한 파이프라인이라는 내용을 정리했습니다.]]></summary></entry><entry><title type="html">작은 실패를 빨리 보는 Jenkins 파이프라인 001</title><link href="https://woonyong-kr.github.io/blog/velog-sample-001/" rel="alternate" type="text/html" title="작은 실패를 빨리 보는 Jenkins 파이프라인 001" /><published>2026-03-27T09:00:00+09:00</published><updated>2026-03-27T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-001</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-001/"><![CDATA[<h2 id="왜-이-주제를-다시-정리하나">왜 이 주제를 다시 정리하나</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://woonyong-kr.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://woonyong-kr.github.io/blog/" rel="alternate" type="text/html" hreflang="ko-KR" /><updated>2026-04-02T21:26:12+09:00</updated><id>https://woonyong-kr.github.io/blog/feed.xml</id><title type="html">woonyong.log</title><subtitle>프론트엔드, 자동화, 배포를 차분하게 기록하는 개발 블로그</subtitle><entry><title type="html">작은 실패를 빨리 보는 Jenkins 파이프라인 001</title><link href="https://woonyong-kr.github.io/blog/velog-sample-001/" rel="alternate" type="text/html" title="작은 실패를 빨리 보는 Jenkins 파이프라인 001" /><published>2026-03-27T09:00:00+09:00</published><updated>2026-03-27T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-001</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-001/"><![CDATA[<h2 id="왜-이-주제를-다시-정리하나">왜 이 주제를 다시 정리하나</h2>
 
 <p><strong>굵게 표시한 핵심 문장</strong>, <em>강조하고 싶은 문장</em>, 그리고 <code class="language-plaintext highlighter-rouge">inline code</code>가 한 단락 안에 섞여 있을 때 읽기 흐름이 어떻게 보이는지 먼저 확인합니다.</p>
 
@@ -173,51 +134,7 @@ bundle <span class="nb">exec </span>jekyll doctor
   <li><del>지운 기준</del> 대신 남길 기준</li>
   <li><mark>강조 표시</mark>를 쓴 문장</li>
   <li>단축키 표기 <kbd>Cmd</kbd> + <kbd>K</kbd></li>
-</ul>]]></content><author><name></name></author><category term="Accessibility" /><category term="UI" /><category term="Frontend" /><category term="Tech Blog" /><summary type="html"><![CDATA[복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.]]></summary></entry><entry><title type="html">컴포넌트 경계를 잡을 때 먼저 보는 세 가지</title><link href="https://woonyong-kr.github.io/blog/component-boundaries/" rel="alternate" type="text/html" title="컴포넌트 경계를 잡을 때 먼저 보는 세 가지" /><published>2026-03-21T11:00:00+09:00</published><updated>2026-03-21T11:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/component-boundaries</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/component-boundaries/"><![CDATA[<p>컴포넌트를 나눌 때 흔히 <code class="language-plaintext highlighter-rouge">재사용 가능할까?</code>를 먼저 묻습니다. 물론 중요하지만, 실제로 더 오래 남는 기준은 아래 세 가지였습니다.</p>
-
-<h2 id="1-누가-상태를-소유하는가">1. 누가 상태를 소유하는가</h2>
-
-<p>상태가 자주 바뀌는 화면일수록 컴포넌트 경계는 마크업보다 상태 소유권에 맞춰야 합니다.</p>
-
-<p>예를 들어 글 목록 카드에서 다음 상태가 섞이면 금방 복잡해집니다.</p>
-
-<ul>
-  <li>정렬 기준</li>
-  <li>필터 조건</li>
-  <li>현재 페이지</li>
-  <li>로딩 상태</li>
-  <li>빈 상태</li>
-</ul>
-
-<p>이때 카드 자체는 최대한 읽기 전용으로 두고, 목록 컨테이너가 상태를 소유하게 두는 편이 낫습니다.</p>
-
-<h2 id="2-변경-이유가-같은가">2. 변경 이유가 같은가</h2>
-
-<p>같은 화면 안에 있어도 변경 이유가 다르면 분리해야 합니다.</p>
-
-<p>예를 들어 프로필 헤더와 글 탭은 가까이 붙어 있지만 바뀌는 이유가 다릅니다.</p>
-
-<ul>
-  <li>프로필 헤더는 사용자 정보가 바뀔 때 수정된다</li>
-  <li>글 탭은 탐색 구조가 바뀔 때 수정된다</li>
-</ul>
-
-<p>이 둘을 한 파일에서 같이 다루기 시작하면 작은 수정도 불필요하게 넓어집니다.</p>
-
-<h2 id="3-스타일-토큰을-공유하는가">3. 스타일 토큰을 공유하는가</h2>
-
-<p>디자인을 비슷하게 맞추는 것과 같은 컴포넌트인 것은 다릅니다. 간격, 색상, 타이포 토큰만 공유하고 실제 구조는 분리하는 편이 더 자주 이깁니다.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"profile"</span><span class="nt">&gt;&lt;/section&gt;</span>
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"velog-tabs"</span><span class="nt">&gt;&lt;/nav&gt;</span>
-<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post-card"</span><span class="nt">&gt;&lt;/article&gt;</span>
-</code></pre></div></div>
-
-<p>이렇게 역할이 분명하면 나중에 일부만 교체해도 전체 인상이 크게 무너지지 않습니다.</p>
-
-<h2 id="결론">결론</h2>
-
-<p>컴포넌트 경계는 보기 좋은 파일 분할보다 <strong>상태, 변경 이유, 토큰 공유 여부</strong>로 정하는 편이 오래 갑니다. 화면 구조가 비슷해 보여도 책임이 다르면 분리하고, 책임이 같으면 파일 수가 조금 적어도 괜찮습니다.</p>]]></content><author><name></name></author><category term="Frontend" /><category term="Architecture" /><category term="Design System" /><summary type="html"><![CDATA[화면을 예쁘게 나누는 기준보다 상태와 책임을 어디에 둘지 먼저 정하면 구현이 훨씬 단단해집니다.]]></summary></entry><entry><title type="html">화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007</title><link href="https://woonyong-kr.github.io/blog/velog-sample-007/" rel="alternate" type="text/html" title="화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007" /><published>2026-03-21T09:00:00+09:00</published><updated>2026-03-21T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-007</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-007/"><![CDATA[<h2 id="긴-본문-샘플">긴 본문 샘플</h2>
+</ul>]]></content><author><name></name></author><category term="Accessibility" /><category term="UI" /><category term="Frontend" /><category term="Tech Blog" /><summary type="html"><![CDATA[복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.]]></summary></entry><entry><title type="html">화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007</title><link href="https://woonyong-kr.github.io/blog/velog-sample-007/" rel="alternate" type="text/html" title="화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007" /><published>2026-03-21T09:00:00+09:00</published><updated>2026-03-21T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-007</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-007/"><![CDATA[<h2 id="긴-본문-샘플">긴 본문 샘플</h2>
 
 <h3 id="1-문제-정의">1. 문제 정의</h3>
 
@@ -252,4 +169,33 @@ bundle <span class="nb">exec </span>jekyll doctor
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="<span class="p">{{</span><span class="w"> </span><span class="s1">'/'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">relative_url</span><span class="w"> </span><span class="p">}}</span>?tag=Frontend"&gt;Frontend&lt;/a&gt;
 </code></pre></div></div>
 
-<p>렌더링 결과에서는 각 코드 블록의 배경, 줄바꿈, 가로 스크롤 처리까지 함께 확인합니다.</p>]]></content><author><name></name></author><category term="TypeScript" /><category term="React" /><category term="DX" /><category term="Markdown" /><summary type="html"><![CDATA[기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.]]></summary></entry></feed>
+<p>렌더링 결과에서는 각 코드 블록의 배경, 줄바꿈, 가로 스크롤 처리까지 함께 확인합니다.</p>]]></content><author><name></name></author><category term="TypeScript" /><category term="React" /><category term="DX" /><category term="Markdown" /><summary type="html"><![CDATA[기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.]]></summary></entry><entry><title type="html">디자인 토큰을 팀 언어로 바꾸는 정적 자산 최적화 009</title><link href="https://woonyong-kr.github.io/blog/velog-sample-009/" rel="alternate" type="text/html" title="디자인 토큰을 팀 언어로 바꾸는 정적 자산 최적화 009" /><published>2026-03-19T09:00:00+09:00</published><updated>2026-03-19T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-009</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-009/"><![CDATA[<h2 id="html-figure-예시">HTML figure 예시</h2>
+
+<figure>
+  <img src="/blog/assets/images/posts/demo-09.svg" alt="샘플 다이어그램" />
+  <figcaption>figure와 figcaption 조합이 본문 안에서 어떻게 보이는지 확인합니다.</figcaption>
+</figure>
+
+<h3 id="체크리스트">체크리스트</h3>
+
+<ul>
+  <li>문단 간격이 일정한가</li>
+  <li>캡션 색과 크기가 과하지 않은가</li>
+  <li>이미지가 없는 글과 있는 글이 카드에서 자연스럽게 섞이는가</li>
+</ul>]]></content><author><name></name></author><category term="Data Fetching" /><category term="Frontend" /><category term="Caching" /><category term="Tech Blog" /><summary type="html"><![CDATA[실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.]]></summary></entry><entry><title type="html">배포 파이프라인을 복구 가능한 구조로 만드는 릴리즈 노트 자동화 010</title><link href="https://woonyong-kr.github.io/blog/velog-sample-010/" rel="alternate" type="text/html" title="배포 파이프라인을 복구 가능한 구조로 만드는 릴리즈 노트 자동화 010" /><published>2026-03-18T09:00:00+09:00</published><updated>2026-03-18T09:00:00+09:00</updated><id>https://woonyong-kr.github.io/blog/velog-sample-010</id><content type="html" xml:base="https://woonyong-kr.github.io/blog/velog-sample-010/"><![CDATA[<h2 id="운영-런북-형식">운영 런북 형식</h2>
+
+<ol>
+  <li>알림을 받으면 먼저 영향 범위를 정리합니다.</li>
+  <li>최근 배포 내역과 변경된 파일을 확인합니다.</li>
+  <li>필요하면 캐시를 비우고, 문제 재현 경로를 기록합니다.</li>
+</ol>
+
+<h3 id="참고-링크">참고 링크</h3>
+
+<ul>
+  <li><a href="https://docs.github.com/en/pages">GitHub Pages 문서</a></li>
+  <li><a href="https://jekyllrb.com/docs/">Jekyll 문서</a></li>
+  <li><a href="https://www.jenkins.io/doc/book/pipeline/">Jenkins Pipeline 문서</a></li>
+</ul>
+
+<p>운영 글은 링크, 목록, 코드, 표가 자연스럽게 섞이는 편이라 샘플로 두기 좋습니다.</p>]]></content><author><name></name></author><category term="Security" /><category term="Operations" /><category term="CI" /><category term="Tech Blog" /><summary type="html"><![CDATA[복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.]]></summary></entry></feed>
