@@ -4,271 +4,91 @@
       
       
       {
-        "title": "작은 실패를 빨리 보는 Jenkins 파이프라인 001",
-        "url": "/blog/velog-sample-001/",
-        "description": "실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-01.svg",
-        "tags": ["Jenkins","GitHub Pages","Deployment","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 27일",
+        "title": "Velog Style Jekyll Theme 소개",
+        "url": "/blog/introducing-velog-style-jekyll-theme/",
+        "description": "velog의 글 읽기 흐름을 참고해 Jekyll과 GitHub Pages에 맞게 다시 구성한 오픈소스 테마를 소개합니다.",
+        "thumbnail": "/blog/assets/images/posts/theme-intro.svg",
+        "tags": ["Jekyll Theme","Velog Style","GitHub Pages","Open Source"],
+        "series_key": "theme-overview",
+        "series_title": "테마 소개와 구조",
+        "date_label": "2026년 4월 2일",
         "reading_time_label": "1분 읽기",
-        "search": "작은 실패를 빨리 보는 jenkins 파이프라인 001 실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다. jenkins github pages deployment tech blog"
+        "search": "velog style jekyll theme 소개 velog의 글 읽기 흐름을 참고해 jekyll과 github pages에 맞게 다시 구성한 오픈소스 테마를 소개합니다. jekyll theme velog style github pages open source 테마 소개와 구조"
       },
     
       
       
       {
-        "title": "운영 메모로 남겨두는 React 상태 흐름 002",
-        "url": "/blog/velog-sample-002/",
-        "description": "복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-02.svg",
-        "tags": ["React","Frontend","Architecture","Tech Blog"],
-        "series_key": "component-architecture",
-        "series_title": "화면을 나누는 기준",
-        "date_label": "2026년 3월 26일",
+        "title": "로컬에서 테마를 설치하고 미리보기하는 가장 빠른 방법",
+        "url": "/blog/installing-the-theme-locally/",
+        "description": "Ruby 의존성 설치부터 GitHub 연동 데이터 동기화, 로컬 미리보기까지 필요한 명령만 모았습니다.",
+        "thumbnail": "/blog/assets/images/posts/local-setup.svg",
+        "tags": ["Quick Start","Local Preview","Ruby","Jekyll"],
+        "series_key": "theme-setup",
+        "series_title": "설치와 커스터마이징",
+        "date_label": "2026년 4월 1일",
         "reading_time_label": "1분 읽기",
-        "search": "운영 메모로 남겨두는 react 상태 흐름 002 복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다. react frontend architecture tech blog 화면을 나누는 기준"
+        "search": "로컬에서 테마를 설치하고 미리보기하는 가장 빠른 방법 ruby 의존성 설치부터 github 연동 데이터 동기화, 로컬 미리보기까지 필요한 명령만 모았습니다. quick start local preview ruby jekyll 설치와 커스터마이징"
       },
     
       
       
       {
-        "title": "컴포넌트 경계를 다시 잡는 API 응답 캐시 003",
-        "url": "/blog/velog-sample-003/",
-        "description": "팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다.",
-        "thumbnail": null,
-        "tags": ["Testing","Automation","CI","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 25일",
+        "title": "프로필, 탭, 홈 화면을 테마 설정으로 커스터마이징하기",
+        "url": "/blog/customizing-profile-navigation-and-home/",
+        "description": "브랜드 문구와 탭 노출 여부, 홈 글 수, GitHub 연동 여부를 어디서 조절하는지 정리합니다.",
+        "thumbnail": "/blog/assets/images/posts/customization.svg",
+        "tags": ["Theme Config","Navigation","Profile","Customization"],
+        "series_key": "theme-setup",
+        "series_title": "설치와 커스터마이징",
+        "date_label": "2026년 3월 31일",
         "reading_time_label": "1분 읽기",
-        "search": "컴포넌트 경계를 다시 잡는 api 응답 캐시 003 팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다. testing automation ci tech blog"
+        "search": "프로필, 탭, 홈 화면을 테마 설정으로 커스터마이징하기 브랜드 문구와 탭 노출 여부, 홈 글 수, github 연동 여부를 어디서 조절하는지 정리합니다. theme config navigation profile customization 설치와 커스터마이징"
       },
     
       
       
       {
-        "title": "빌드 시간을 줄이기 전에 보는 에러 관측 포인트 004",
-        "url": "/blog/velog-sample-004/",
-        "description": "기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-04.svg",
-        "tags": ["Performance","Frontend","Browser","Markdown"],
-        "series_key": "design-systems",
-        "series_title": "디자인 시스템 운영 메모",
-        "date_label": "2026년 3월 24일",
+        "title": "글, 시리즈, 태그, 썸네일을 이 테마에서 다루는 방법",
+        "url": "/blog/writing-posts-series-and-thumbnails/",
+        "description": "Markdown 글 작성부터 시리즈 연결, 태그 필터, 썸네일 조건부 노출까지 한 번에 설명합니다.",
+        "thumbnail": "/blog/assets/images/posts/writing-guide.svg",
+        "tags": ["Markdown","Series","Tags","Thumbnail"],
+        "series_key": "theme-overview",
+        "series_title": "테마 소개와 구조",
+        "date_label": "2026년 3월 30일",
         "reading_time_label": "1분 읽기",
-        "search": "빌드 시간을 줄이기 전에 보는 에러 관측 포인트 004 기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다. performance frontend browser markdown 디자인 시스템 운영 메모"
+        "search": "글, 시리즈, 태그, 썸네일을 이 테마에서 다루는 방법 markdown 글 작성부터 시리즈 연결, 태그 필터, 썸네일 조건부 노출까지 한 번에 설명합니다. markdown series tags thumbnail 테마 소개와 구조"
       },
     
       
       
       {
-        "title": "읽기 좋은 기술 문서를 만드는 디자인 시스템 문서화 005",
-        "url": "/blog/velog-sample-005/",
-        "description": "실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-05.svg",
-        "tags": ["Design System","CSS","Frontend","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 23일",
+        "title": "GitHub Pages와 Jenkins로 테마를 배포하는 방법",
+        "url": "/blog/deploying-with-github-pages-and-jenkins/",
+        "description": "프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다.",
+        "thumbnail": "/blog/assets/images/posts/deployment-guide.svg",
+        "tags": ["GitHub Pages","Jenkins","Deployment","Open Source"],
+        "series_key": "theme-operations",
+        "series_title": "배포와 운영",
+        "date_label": "2026년 3월 29일",
         "reading_time_label": "1분 읽기",
-        "search": "읽기 좋은 기술 문서를 만드는 디자인 시스템 문서화 005 실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다. design system css frontend tech blog"
+        "search": "github pages와 jenkins로 테마를 배포하는 방법 프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다. github pages jenkins deployment open source 배포와 운영"
       },
     
       
       
       {
-        "title": "테스트가 덜 흔들리게 만드는 접근성 점검 루틴 006",
-        "url": "/blog/velog-sample-006/",
-        "description": "복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.",
-        "thumbnail": null,
-        "tags": ["Accessibility","UI","Frontend","Tech Blog"],
-        "series_key": "observability-notes",
-        "series_title": "관측 가능성 로그북",
-        "date_label": "2026년 3월 22일",
+        "title": "GitHub 프로필 동기화와 기여 그래프를 붙이는 방법",
+        "url": "/blog/github-profile-sync-and-contribution-graph/",
+        "description": "GitHub 아이디만 연결하면 이름, 아바타, 링크, 기여 그래프가 홈 화면에 반영되는 흐름을 설명합니다.",
+        "thumbnail": "/blog/assets/images/posts/github-sync.svg",
+        "tags": ["GitHub","GraphQL","Profile Sync","Jekyll Theme"],
+        "series_key": "theme-operations",
+        "series_title": "배포와 운영",
+        "date_label": "2026년 3월 28일",
         "reading_time_label": "1분 읽기",
-        "search": "테스트가 덜 흔들리게 만드는 접근성 점검 루틴 006 복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다. accessibility ui frontend tech blog 관측 가능성 로그북"
-      },
-    
-      
-      
-      {
-        "title": "화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007",
-        "url": "/blog/velog-sample-007/",
-        "description": "팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-07.svg",
-        "tags": ["Observability","Operations","Automation","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 21일",
-        "reading_time_label": "1분 읽기",
-        "search": "화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 007 팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다. observability operations automation tech blog"
-      },
-    
-      
-      
-      {
-        "title": "릴리즈 체크리스트를 단순하게 유지하는 코드리뷰 기준선 008",
-        "url": "/blog/velog-sample-008/",
-        "description": "기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-08.svg",
-        "tags": ["TypeScript","React","DX","Markdown"],
-        "series_key": "data-fetching",
-        "series_title": "데이터 페칭 레시피",
-        "date_label": "2026년 3월 20일",
-        "reading_time_label": "1분 읽기",
-        "search": "릴리즈 체크리스트를 단순하게 유지하는 코드리뷰 기준선 008 기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다. typescript react dx markdown 데이터 페칭 레시피"
-      },
-    
-      
-      
-      {
-        "title": "디자인 토큰을 팀 언어로 바꾸는 정적 자산 최적화 009",
-        "url": "/blog/velog-sample-009/",
-        "description": "실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.",
-        "thumbnail": null,
-        "tags": ["Data Fetching","Frontend","Caching","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 19일",
-        "reading_time_label": "1분 읽기",
-        "search": "디자인 토큰을 팀 언어로 바꾸는 정적 자산 최적화 009 실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다. data fetching frontend caching tech blog"
-      },
-    
-      
-      
-      {
-        "title": "배포 파이프라인을 복구 가능한 구조로 만드는 릴리즈 노트 자동화 010",
-        "url": "/blog/velog-sample-010/",
-        "description": "복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-10.svg",
-        "tags": ["Security","Operations","CI","Tech Blog"],
-        "series_key": "browser-performance",
-        "series_title": "브라우저 성능 메모",
-        "date_label": "2026년 3월 18일",
-        "reading_time_label": "1분 읽기",
-        "search": "배포 파이프라인을 복구 가능한 구조로 만드는 릴리즈 노트 자동화 010 복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다. security operations ci tech blog 브라우저 성능 메모"
-      },
-    
-      
-      
-      {
-        "title": "작은 실패를 빨리 보는 Jenkins 파이프라인 011",
-        "url": "/blog/velog-sample-011/",
-        "description": "팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-11.svg",
-        "tags": ["Jenkins","GitHub Pages","Deployment","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 17일",
-        "reading_time_label": "1분 읽기",
-        "search": "작은 실패를 빨리 보는 jenkins 파이프라인 011 팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다. jenkins github pages deployment tech blog"
-      },
-    
-      
-      
-      {
-        "title": "운영 메모로 남겨두는 React 상태 흐름 012",
-        "url": "/blog/velog-sample-012/",
-        "description": "기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.",
-        "thumbnail": null,
-        "tags": ["React","Frontend","Architecture","Markdown"],
-        "series_key": "component-architecture",
-        "series_title": "화면을 나누는 기준",
-        "date_label": "2026년 3월 16일",
-        "reading_time_label": "1분 읽기",
-        "search": "운영 메모로 남겨두는 react 상태 흐름 012 기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다. react frontend architecture markdown 화면을 나누는 기준"
-      },
-    
-      
-      
-      {
-        "title": "컴포넌트 경계를 다시 잡는 API 응답 캐시 013",
-        "url": "/blog/velog-sample-013/",
-        "description": "실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-01.svg",
-        "tags": ["Testing","Automation","CI","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 15일",
-        "reading_time_label": "1분 읽기",
-        "search": "컴포넌트 경계를 다시 잡는 api 응답 캐시 013 실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다. testing automation ci tech blog"
-      },
-    
-      
-      
-      {
-        "title": "빌드 시간을 줄이기 전에 보는 에러 관측 포인트 014",
-        "url": "/blog/velog-sample-014/",
-        "description": "복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-02.svg",
-        "tags": ["Performance","Frontend","Browser","Tech Blog"],
-        "series_key": "design-systems",
-        "series_title": "디자인 시스템 운영 메모",
-        "date_label": "2026년 3월 14일",
-        "reading_time_label": "1분 읽기",
-        "search": "빌드 시간을 줄이기 전에 보는 에러 관측 포인트 014 복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다. performance frontend browser tech blog 디자인 시스템 운영 메모"
-      },
-    
-      
-      
-      {
-        "title": "읽기 좋은 기술 문서를 만드는 디자인 시스템 문서화 015",
-        "url": "/blog/velog-sample-015/",
-        "description": "팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다.",
-        "thumbnail": null,
-        "tags": ["Design System","CSS","Frontend","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 13일",
-        "reading_time_label": "1분 읽기",
-        "search": "읽기 좋은 기술 문서를 만드는 디자인 시스템 문서화 015 팀 지식으로 남기기 좋은 형식으로 체크리스트와 코드 예시를 함께 담았습니다. design system css frontend tech blog"
-      },
-    
-      
-      
-      {
-        "title": "테스트가 덜 흔들리게 만드는 접근성 점검 루틴 016",
-        "url": "/blog/velog-sample-016/",
-        "description": "기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-04.svg",
-        "tags": ["Accessibility","UI","Frontend","Markdown"],
-        "series_key": "observability-notes",
-        "series_title": "관측 가능성 로그북",
-        "date_label": "2026년 3월 12일",
-        "reading_time_label": "1분 읽기",
-        "search": "테스트가 덜 흔들리게 만드는 접근성 점검 루틴 016 기술 블로그에서 자주 쓰는 마크다운 문법이 어떻게 보이는지 확인하기 위한 샘플 글입니다. accessibility ui frontend markdown 관측 가능성 로그북"
-      },
-    
-      
-      
-      {
-        "title": "화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 017",
-        "url": "/blog/velog-sample-017/",
-        "description": "실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다.",
-        "thumbnail": "/blog/assets/images/posts/demo-05.svg",
-        "tags": ["Observability","Operations","Automation","Tech Blog"],
-        "series_key": "",
-        "series_title": null,
-        "date_label": "2026년 3월 11일",
-        "reading_time_label": "1분 읽기",
-        "search": "화면 로딩을 체감상 빠르게 만드는 타입 안전한 폼 017 실제 운영에서 자주 마주치는 문제를 작은 단위의 화면과 배포 흐름으로 풀어봅니다. observability operations automation tech blog"
-      },
-    
-      
-      
-      {
-        "title": "릴리즈 체크리스트를 단순하게 유지하는 코드리뷰 기준선 018",
-        "url": "/blog/velog-sample-018/",
-        "description": "복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다.",
-        "thumbnail": null,
-        "tags": ["TypeScript","React","DX","Tech Blog"],
-        "series_key": "data-fetching",
-        "series_title": "데이터 페칭 레시피",
-        "date_label": "2026년 3월 10일",
-        "reading_time_label": "1분 읽기",
-        "search": "릴리즈 체크리스트를 단순하게 유지하는 코드리뷰 기준선 018 복잡한 선택지를 줄이고, 복구와 유지보수가 쉬운 기준만 남기는 과정을 정리한 글입니다. typescript react dx tech blog 데이터 페칭 레시피"
+        "search": "github 프로필 동기화와 기여 그래프를 붙이는 방법 github 아이디만 연결하면 이름, 아바타, 링크, 기여 그래프가 홈 화면에 반영되는 흐름을 설명합니다. github graphql profile sync jekyll theme 배포와 운영"
       }
     
   ]
