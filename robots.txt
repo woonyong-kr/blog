@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4313/blog/sitemap.xml
+Sitemap: https://woonyong-kr.github.io/blog/sitemap.xml
