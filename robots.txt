@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4010/jekyll-theme-velog/sitemap.xml
+Sitemap: https://woonyong-kr.github.io/jekyll-theme-velog/sitemap.xml
