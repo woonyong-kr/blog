@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="avatar-clip">
+      <circle cx="32" cy="32" r="24"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="25.5" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <image
+    href="https://avatars.githubusercontent.com/u/230139989?v=4"
+    x="8"
+    y="8"
+    width="48"
+    height="48"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#avatar-clip)"
+  />
+</svg>
