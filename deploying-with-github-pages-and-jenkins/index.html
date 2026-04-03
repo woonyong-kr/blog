@@ -20,13 +20,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff" data-theme-color>
 <meta name="apple-mobile-web-app-status-bar-style" content="default" data-apple-status-bar>
-<link rel="icon" href="/jekyll-theme-velog/assets/images/favicon.png?v=1775199411" type="image/png" sizes="256x256">
-<link rel="shortcut icon" href="/jekyll-theme-velog/assets/images/favicon.png?v=1775199411" type="image/png">
-<link rel="apple-touch-icon" href="/jekyll-theme-velog/assets/images/favicon.png?v=1775199411">
-<link rel="mask-icon" href="/jekyll-theme-velog/assets/images/profile.svg?v=1775199411" color="#495057">
-<link rel="alternate" type="application/atom+xml" href="/jekyll-theme-velog/feed.xml" title="Velog Style Jekyll Theme">
+<link rel="icon" href="/assets/images/favicon.png?v=1775200806" type="image/png" sizes="256x256">
+<link rel="shortcut icon" href="/assets/images/favicon.png?v=1775200806" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/favicon.png?v=1775200806">
+<link rel="mask-icon" href="/assets/images/profile.svg?v=1775200806" color="#495057">
+<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Velog Style Jekyll Theme">
 
-<link rel="stylesheet" href="/jekyll-theme-velog/assets/css/main.css?v=1775199411">
+<link rel="stylesheet" href="/assets/css/main.css?v=1775200806">
 <script>
   (function () {
     function applyTheme(theme) {
@@ -69,15 +69,15 @@
 <meta property="og:locale" content="ko_KR" />
 <meta name="description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다." />
 <meta property="og:description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다." />
-<link rel="canonical" href="https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/" />
-<meta property="og:url" content="https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/" />
+<link rel="canonical" href="https://blog.woonyong.org/deploying-with-github-pages-and-jenkins/" />
+<meta property="og:url" content="https://blog.woonyong.org/deploying-with-github-pages-and-jenkins/" />
 <meta property="og:site_name" content="Velog Style Jekyll Theme" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2026-03-29T09:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GitHub Pages와 Jenkins로 테마를 배포하는 방법" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-29T09:00:00+09:00","datePublished":"2026-03-29T09:00:00+09:00","description":"프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다.","headline":"GitHub Pages와 Jenkins로 테마를 배포하는 방법","mainEntityOfPage":{"@type":"WebPage","@id":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"},"url":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-29T09:00:00+09:00","datePublished":"2026-03-29T09:00:00+09:00","description":"프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다.","headline":"GitHub Pages와 Jenkins로 테마를 배포하는 방법","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.woonyong.org/deploying-with-github-pages-and-jenkins/"},"url":"https://blog.woonyong.org/deploying-with-github-pages-and-jenkins/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -103,7 +103,7 @@
     
     
 
-    <a class="header-logo" href="/jekyll-theme-velog/" aria-label="Velog Style Jekyll Theme">
+    <a class="header-logo" href="/" aria-label="Velog Style Jekyll Theme">
       
         <img
           class="header-logo__mark header-logo__mark--avatar"
@@ -138,7 +138,7 @@
           </a>
         
         
-          <a class="icon-button" href="/jekyll-theme-velog/feed.xml" aria-label="RSS" title="RSS">
+          <a class="icon-button" href="/feed.xml" aria-label="RSS" title="RSS">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M5 3.5a1.5 1.5 0 0 0 0 3c6.9 0 12.5 5.6 12.5 12.5a1.5 1.5 0 0 0 3 0C20.5 10.44 13.56 3.5 5 3.5Zm0 6a1.5 1.5 0 0 0 0 3c3.58 0 6.5 2.92 6.5 6.5a1.5 1.5 0 0 0 3 0c0-5.24-4.26-9.5-9.5-9.5Zm.5 7.75A2.25 2.25 0 1 0 5.5 21.5a2.25 2.25 0 0 0 0-4.25Z"
@@ -181,7 +181,7 @@
 
 
 <article class="post-view">
-  <a class="post-view__back" href="/jekyll-theme-velog/">글 목록으로 돌아가기</a>
+  <a class="post-view__back" href="/">글 목록으로 돌아가기</a>
 
   <header class="post-head">
     
@@ -213,20 +213,20 @@
     
       <div class="post-head__tags">
         
-          <a class="tag-chip" href="/jekyll-theme-velog/?tag=GitHub%20Pages">GitHub Pages</a>
+          <a class="tag-chip" href="/?tag=GitHub%20Pages">GitHub Pages</a>
         
-          <a class="tag-chip" href="/jekyll-theme-velog/?tag=Jenkins">Jenkins</a>
+          <a class="tag-chip" href="/?tag=Jenkins">Jenkins</a>
         
-          <a class="tag-chip" href="/jekyll-theme-velog/?tag=Deployment">Deployment</a>
+          <a class="tag-chip" href="/?tag=Deployment">Deployment</a>
         
-          <a class="tag-chip" href="/jekyll-theme-velog/?tag=Open%20Source">Open Source</a>
+          <a class="tag-chip" href="/?tag=Open%20Source">Open Source</a>
         
       </div>
     
 
     
       <div class="post-head__thumbnail">
-        <img src="/jekyll-theme-velog/assets/images/posts/deployment-guide-cover.png" alt="GitHub Pages와 Jenkins로 테마를 배포하는 방법" decoding="async">
+        <img src="/assets/images/posts/deployment-guide-cover.png" alt="GitHub Pages와 Jenkins로 테마를 배포하는 방법" decoding="async">
       </div>
     
   </header>
@@ -262,11 +262,11 @@
 
 <p>가장 자주 틀리는 부분은 <code class="language-plaintext highlighter-rouge">baseurl</code>입니다. 프로젝트 페이지는 저장소 이름이 URL 경로가 되므로, 저장소를 <code class="language-plaintext highlighter-rouge">jekyll-theme-velog</code>로 바꿨다면 <code class="language-plaintext highlighter-rouge">_config.yml</code>도 이렇게 맞아야 합니다.</p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://woonyong-kr.github.io"</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/jekyll-theme-velog"</span>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://blog.woonyong.org"</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
 </code></pre></div></div>
 
-<p>이 값이 예전 저장소 이름으로 남아 있으면 CSS, JS, 이미지 경로가 모두 어긋납니다.</p>
+<p>커스텀 도메인을 쓴다면 <code class="language-plaintext highlighter-rouge">baseurl</code>은 보통 비워 두는 편이 맞습니다. 반대로 <code class="language-plaintext highlighter-rouge">github.io/저장소명</code> 프로젝트 페이지를 그대로 쓸 때는 저장소 이름을 <code class="language-plaintext highlighter-rouge">baseurl</code>로 넣어야 합니다.</p>
 
 <h2 id="jenkins에서-필요한-것">Jenkins에서 필요한 것</h2>
 
@@ -310,7 +310,7 @@
   
     <nav class="post-navigation" aria-label="이전 다음 글">
       
-        <a class="post-navigation__item" href="/jekyll-theme-velog/github-profile-sync-and-contribution-graph/">
+        <a class="post-navigation__item" href="/github-profile-sync-and-contribution-graph/">
           <span class="post-navigation__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M20 11H7.83l5.58-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z" fill="currentColor"></path>
@@ -323,7 +323,7 @@
         </a>
       
       
-        <a class="post-navigation__item post-navigation__item--next" href="/jekyll-theme-velog/writing-posts-series-and-thumbnails/">
+        <a class="post-navigation__item post-navigation__item--next" href="/writing-posts-series-and-thumbnails/">
           <span class="post-navigation__content">
             <span class="post-navigation__label">다음 포스트</span>
             <strong class="post-navigation__title">글, 시리즈, 태그, 썸네일을 이 테마에서 다루는 방법</strong>
@@ -353,6 +353,6 @@
 </footer>
 
     
-    <script src="/jekyll-theme-velog/assets/js/site.js?v=1775199411"></script>
+    <script src="/assets/js/site.js?v=1775200806"></script>
   </body>
 </html>
