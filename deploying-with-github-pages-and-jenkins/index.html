@@ -26,10 +26,10 @@
 <link rel="icon" href="https://avatars.githubusercontent.com/u/230139989?v=4">
 <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/230139989?v=4">
 <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/230139989?v=4">
-<link rel="mask-icon" href="/jekyll-theme-velog/assets/images/profile.svg?v=1775188480" color="#495057">
+<link rel="mask-icon" href="/jekyll-theme-velog/assets/images/profile.svg?v=1775189469" color="#495057">
 <link rel="alternate" type="application/atom+xml" href="/jekyll-theme-velog/feed.xml" title="Velog Style Jekyll Theme">
 
-<link rel="stylesheet" href="/jekyll-theme-velog/assets/css/main.css?v=1775188480">
+<link rel="stylesheet" href="/jekyll-theme-velog/assets/css/main.css?v=1775189469">
 <script>
   (function () {
     function applyTheme(theme) {
@@ -70,8 +70,8 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="GitHub Pages와 Jenkins로 테마를 배포하는 방법" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다." />
-<meta property="og:description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다." />
+<meta name="description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다." />
+<meta property="og:description" content="프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다." />
 <link rel="canonical" href="https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/" />
 <meta property="og:url" content="https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/" />
 <meta property="og:site_name" content="Velog Style Jekyll Theme" />
@@ -80,7 +80,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GitHub Pages와 Jenkins로 테마를 배포하는 방법" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-29T09:00:00+09:00","datePublished":"2026-03-29T09:00:00+09:00","description":"프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다.","headline":"GitHub Pages와 Jenkins로 테마를 배포하는 방법","mainEntityOfPage":{"@type":"WebPage","@id":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"},"url":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-29T09:00:00+09:00","datePublished":"2026-03-29T09:00:00+09:00","description":"프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다.","headline":"GitHub Pages와 Jenkins로 테마를 배포하는 방법","mainEntityOfPage":{"@type":"WebPage","@id":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"},"url":"https://woonyong-kr.github.io/jekyll-theme-velog/deploying-with-github-pages-and-jenkins/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -192,7 +192,7 @@
     
     <h1 class="post-head__title">GitHub Pages와 Jenkins로 테마를 배포하는 방법</h1>
     
-      <p class="post-head__description">프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 기본 흐름을 정리합니다.</p>
+      <p class="post-head__description">프로젝트 페이지 기준으로 빌드 결과를 gh-pages 브랜치에 배포하는 흐름과 저장소 이름 변경 시 주의할 점까지 정리합니다.</p>
     
 
     <div class="post-head__author">
@@ -208,7 +208,7 @@
       <div class="post-head__meta-block">
         <strong>choi woo-nyong</strong>
         <span>
-          2026년 3월 29일 · 1분 읽기 · 수정 2026년 4월 2일
+          2026년 3월 29일 · 2분 읽기 · 수정 2026년 4월 3일
         </span>
       </div>
     </div>
@@ -235,25 +235,80 @@
   </header>
 
   <section class="prose">
-    <p>이 저장소는 <code class="language-plaintext highlighter-rouge">main</code>에서 Jekyll을 빌드하고, 결과를 <code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치로 배포하는 구조를 기본값으로 둡니다.</p>
+    <p>이 테마는 <code class="language-plaintext highlighter-rouge">main</code>에서 Jekyll을 빌드하고, 결과를 <code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치로 배포하는 구조를 기본값으로 둡니다. GitHub Pages 프로젝트 페이지 기준으로 가장 단순하고 재현하기 쉬운 배포 방식입니다.</p>
 
-<p>파이프라인이 하는 일은 단순합니다.</p>
+<p><img src="/jekyll-theme-velog/assets/images/posts/deployment-pipeline-detail.svg" alt="배포 파이프라인 다이어그램" /></p>
+
+<h2 id="기본-배포-흐름">기본 배포 흐름</h2>
+
+<p>파이프라인이 하는 일은 아래 네 단계입니다.</p>
 
 <ol>
   <li>gem 설치</li>
   <li>GitHub 프로필과 기여 그래프 캐시 동기화</li>
   <li><code class="language-plaintext highlighter-rouge">jekyll build</code></li>
-  <li><code class="language-plaintext highlighter-rouge">_site/</code> 내용을 <code class="language-plaintext highlighter-rouge">gh-pages</code>로 푸시</li>
+  <li><code class="language-plaintext highlighter-rouge">_site/</code> 내용을 <code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치로 푸시</li>
 </ol>
 
-<p>Jenkins를 쓰지 않더라도, 생성 결과는 어디서든 재사용할 수 있습니다.</p>
+<p>Jenkins를 쓰지 않더라도, 핵심은 “정적 결과물을 어디에 배포할지”입니다. CI가 GitHub Actions든 Jenkins든 결과만 <code class="language-plaintext highlighter-rouge">gh-pages</code>에 올리면 구조는 같습니다.</p>
+
+<h2 id="github-pages-설정">GitHub Pages 설정</h2>
+
+<p>프로젝트 페이지를 쓰는 경우 GitHub 저장소 설정에서 아래 두 가지를 맞춰야 합니다.</p>
+
+<ul>
+  <li>Pages source: <code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치</li>
+  <li>Folder: <code class="language-plaintext highlighter-rouge">/ (root)</code></li>
+</ul>
+
+<p>이 설정이 빠지면 브랜치는 갱신돼도 실제 사이트는 열리지 않습니다.</p>
+
+<h2 id="저장소-이름과-baseurl">저장소 이름과 baseurl</h2>
+
+<p>가장 자주 틀리는 부분은 <code class="language-plaintext highlighter-rouge">baseurl</code>입니다. 프로젝트 페이지는 저장소 이름이 URL 경로가 되므로, 저장소를 <code class="language-plaintext highlighter-rouge">jekyll-theme-velog</code>로 바꿨다면 <code class="language-plaintext highlighter-rouge">_config.yml</code>도 이렇게 맞아야 합니다.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://woonyong-kr.github.io"</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/jekyll-theme-velog"</span>
+</code></pre></div></div>
+
+<p>이 값이 예전 저장소 이름으로 남아 있으면 CSS, JS, 이미지 경로가 모두 어긋납니다.</p>
+
+<h2 id="jenkins에서-필요한-것">Jenkins에서 필요한 것</h2>
+
+<p>이 저장소의 <code class="language-plaintext highlighter-rouge">Jenkinsfile</code>을 그대로 쓰려면 아래 자격 증명이 필요합니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">github-pages</code>
+    <ul>
+      <li>username: GitHub 사용자명</li>
+      <li>password: GitHub Personal Access Token</li>
+    </ul>
+  </li>
+</ul>
+
+<p>그리고 Jenkins 에이전트에는 Ruby와 Bundler가 있어야 합니다.</p>
+
+<h2 id="수동-배포로-검증하는-방법">수동 배포로 검증하는 방법</h2>
+
+<p>자동화 전에 먼저 로컬 빌드만 검증하고 싶다면 아래 명령으로 충분합니다.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">BUNDLE_FORCE_RUBY_PLATFORM</span><span class="o">=</span><span class="nb">true </span>bundle <span class="nb">exec </span>jekyll build
 </code></pre></div></div>
 
-<p>Jenkins를 붙인다면 <code class="language-plaintext highlighter-rouge">github-pages</code> 크리덴셜만 준비하면 되고, GitHub Pages의 소스를 <code class="language-plaintext highlighter-rouge">gh-pages</code> 브랜치 루트로 지정하면 됩니다.</p>
+<p>그 다음 <code class="language-plaintext highlighter-rouge">_site</code> 내용이 올바른지 확인한 뒤, 원하는 배포 도구로 <code class="language-plaintext highlighter-rouge">gh-pages</code>에 올리면 됩니다.</p>
 
-<p>이 글의 썸네일과 다른 샘플 SVG는 모두 이 저장소를 위해 직접 만든 원본 자산이라, 오픈소스 데모로 그대로 배포할 수 있습니다.</p>
+<h2 id="배포-후-확인-체크리스트">배포 후 확인 체크리스트</h2>
+
+<p>배포가 끝났다면 아래 네 가지를 바로 보는 편이 좋습니다.</p>
+
+<ol>
+  <li>Pages 주소가 200 응답인지</li>
+  <li><code class="language-plaintext highlighter-rouge">index.html</code>이 올바른 <code class="language-plaintext highlighter-rouge">baseurl</code>을 쓰는지</li>
+  <li><code class="language-plaintext highlighter-rouge">feed.xml</code>과 썸네일 이미지가 정상 응답인지</li>
+  <li>홈과 시리즈 페이지가 같은 경로 체계를 쓰는지</li>
+</ol>
+
+<p>정적 블로그는 에러 로그보다 “잘못된 링크 경로”가 더 흔한 장애 원인이기 때문에, 이 체크리스트만으로도 대부분의 배포 문제를 초기에 잡을 수 있습니다.</p>
 
   </section>
 
@@ -303,6 +358,6 @@
 </footer>
 
     
-    <script src="/jekyll-theme-velog/assets/js/site.js?v=1775188480"></script>
+    <script src="/jekyll-theme-velog/assets/js/site.js?v=1775189469"></script>
   </body>
 </html>
